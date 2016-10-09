@@ -1,0 +1,12 @@
+Q.
+Is there anything wrong with the following piece of code (hint: yes)? What does it do?
+int i = 10
+while (i < 5) {
+i++;
+println i
+}
+
+A.
+int i is already bigger than 5 so the loop will not start.
+
+Program should print all the numbers from i until 5 on separate lines
