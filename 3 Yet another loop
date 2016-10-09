@@ -1,0 +1,22 @@
+Q.
+What does the following piece of code do?
+
+String str = System.console().readLine()
+int i = Integer.parseInt(str)
+while (i < 10) {
+  i++;
+  str = System.console().readLine()
+  int j = Integer.parseInt(str)
+  if (j == 0) {
+    break;
+  } else if (j != 1) {
+    println j;
+  }
+}
+println "finished"
+Hint: the reserved word break exits the current loop.
+
+A.
+Takes a number from the input and while it is less than 10 it adds 1 to it.
+Then takes another number from the input. If that number is 0 then the if loop is exited and while loop resumed. 
+If it is not 1, then it prints that number.
