@@ -18,5 +18,5 @@ Hint: the reserved word break exits the current loop.
 
 A.
 Takes a number from the input and while it is less than 10 it adds 1 to it.
-Then takes another number from the input. If that number is 0 then the if loop is exited and while loop resumed. 
+Then takes another number from the input. If that number is 0 then the while loop is exited and the program says it is finished. 
 If it is not 1, then it prints that number.
