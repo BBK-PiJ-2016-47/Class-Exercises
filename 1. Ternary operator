@@ -1,0 +1,13 @@
+Q.
+Read the following code and, without executing it first, explain what it does.
+int currentYear = 2012
+print "When were you born (year)?"
+String str = System.console().readLine();
+int birthYear = Integer.parseInt(str);
+int ageAprox = currentYear - birthYear;
+String result = (ageAprox > 17) ? "" : "not "
+println "It seems you are " + result + "an adult."
+
+A.
+Asks for the year someone was born, takes that from the current year and tells the user that they are an adult if they're older than 17
+and not an adult if they're younger.
