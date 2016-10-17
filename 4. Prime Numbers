@@ -1,0 +1,20 @@
+int i = 2
+print "Please enter a number: "
+String s = System.console().readLine()
+num = Integer.parseInt(s)
+
+while (i < 10) {
+    if (i == num) {
+      i++
+    } else {
+      int a = num % i
+    if (a == 0) {
+      print "This is not a prime number."
+      break;
+    } else {
+      i++
+    }
+  }
+print "This is a prime number."
+break;
+}
