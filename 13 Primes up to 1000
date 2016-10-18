@@ -9,7 +9,7 @@ for (int num = 0;num < 1000;num++) {
       i++
     } else {
       int a = num % i
-        if (a !== 0) {
+        if (a != 0) {
           println num
           i++
         } else {
