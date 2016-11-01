@@ -1,3 +1,7 @@
+/*5 Multiplication
+Write a program that requests two numbers from the user and then outputs its product. You cannot use the “*”
+operator.*/
+
 String s = ""
 int num1 = 0
 int num2 = 0
