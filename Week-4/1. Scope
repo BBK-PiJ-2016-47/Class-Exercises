@@ -1,0 +1,32 @@
+Q.
+Look at the following code (with line numbers for clarity) and say where each of the following variables is visible:
+i, j, newSize, size.
+
+ class UnitMatrix {
+   int size;
+
+   void setSize(int newSize) {
+     this.size = newSize;
+   }
+
+   void print() {
+     for (int i = 0; i < size; i++) {
+       for (int j = 0; j < size; j++) {
+         if (i == j) {
+           println("1 ");
+         } else {
+           println("0 ");
+         }
+       }
+       println ""
+     }
+   }
+ }
+
+say where each of the following variables is visible:
+
+A.
+i = lines 09-18
+j = lines 10-16
+newSize = lines 4-6
+size = 0-19
