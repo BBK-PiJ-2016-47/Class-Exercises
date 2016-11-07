@@ -10,7 +10,7 @@ at each level so that the pyramid is properly aligned to the right.
 7 7 7 7 7 7 7
 8 8 8 8 8 8 8 8*/
 
-print "Please enter a number: "
+print "Please enter a number between 1-25: "
 String inpt = System.console().readLine()
 int num = Integer.parseInt(inpt)
 int x = 0
@@ -32,4 +32,5 @@ while (x < num) {
     }
   println ""
   x++
-} 
+  }
+}
