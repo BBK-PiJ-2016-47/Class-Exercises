@@ -30,11 +30,12 @@ int guess = Integer.parseInt(s);
       println "No! My number is higher!"
       }
     println "Guess again: "
-    String s = System.console().readLine()
-    int guess = Integer.parseInt(s);
+    s = System.console().readLine()
+    guess = Integer.parseInt(s);
     count++;
     }
 
   if (guess == numberToGuess) {
     println "You guessed it! Well done!"
     println "You tried to guess the number " + count + " times."
+   }
