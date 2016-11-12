@@ -3,6 +3,14 @@ public class Matrix {
 
   public Matrix (int first, int second) {
     Arr = new int[first][second];
+    for(int i = 0; i < first; i++) {
+      Arr[i] = 1;
+    }
+    for(int i = 0; i < second; i++) {
+      Arr[i][i] = 1;    
+    }
+
+    
   } 
 
   public void setElement (int first, int second, int elem) {
