@@ -5,7 +5,7 @@ public class Matrix {
     Arr = new int[first][second];
   } 
 
-  public setElement (int first, int second, int elem) {
+  public void setElement (int first, int second, int elem) {
     if (first > Arr.length) {
       System.out.println("Your first parameter is too large!")
     } else if (second > Arr[0].length) {
@@ -15,7 +15,21 @@ public class Matrix {
     }
   }
 
-  public 
+  public void setRow(int param,String input) {
+    int inpt = Integer.Parseint(input);
+    if (param > input numbers)
 
+  }
 
+  public void setColumn(int param, String input) {
+
+  }
+
+  public String toString() {
+
+  }
+
+  public void prettyPrint() {
+
+  }
 }
