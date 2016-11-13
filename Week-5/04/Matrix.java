@@ -1,22 +1,22 @@
 public class Matrix {
   private int [] [] Arr;
 
-  public Matrix (int first, int second) {
-    Arr = new int[first][second];
-    for(int i = 0; i < first; i++) {
-      for(int j = 0; j < second; j++) {
+  public Matrix (int row, int column) {
+    Arr = new int[row][column];
+    for(int i = 0; i < row; i++) {
+      for(int j = 0; j < column; j++) {
        Arr[i][j] = 1;    
       }
     } 
   } 
 
-  public void setElement (int first, int second, int elem) {
-    if (first > Arr.length) {
+  public void setElement (int row, int column, int elem) {
+    if (row > Arr.length) {
       System.out.println("Your first parameter is too large!");
-    } else if (second > Arr[0].length) {
+    } else if (column > Arr[0].length) {
       System.out.println("Your second parameter is too large!");
     } else {
-      Arr[first][second] = elem;
+      Arr[row][column] = elem;
     }
   }
 
@@ -25,21 +25,21 @@ public class Matrix {
 
   }
 
-  public void setColumn(int param, String input) {
+  public void setColumn(int colNum, String input) {
 
   }
 
   public String toString() {
 
-    String strarr = "[";
+    String strArr = "[";
     for(int i = 0; i < Arr.length; i++) {
-      strarr = strarr + ";";
+      strArr = strArr + ";";
       for(int j = 0; j < Arr[i].length; j++) {
-       strarr = strarr + Arr[i][j] + ",";   
+       strArr = strArr + Arr[i][j] + ",";   
       }
     }
-    strarr = strarr + "]";
-    return strarr;
+    strArr = strArr + "]";
+    return strArr;
   }
 
   public void prettyPrint() {
