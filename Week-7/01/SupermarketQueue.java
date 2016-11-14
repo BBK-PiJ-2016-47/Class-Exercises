@@ -1,29 +1,30 @@
-		public class SupermarketQueue implements PersonQueue {
-		private Person firstPerson = null
+	public class SupermarketQueue implements PersonQueue {
+		private Person lastElementIn = null;
 		
 		public void insert(Person person) {
-		if (firstPerson == null) {
-			firstPerson = person;
-			return;
+			if (lastElementIn == null) {
+				lastElementIn = person;
+				return;
+			}
+		
+			person.nextPerson = lastElementIn;
+			lastElementIn = person;
 		}
 		
-		person.nextPerson = firstPerson;
-		firstPerson = person;
-		}
-		/*
-	Person current = this.firstPerson;
-		while (current.getNextPerson() != null) {
-		current = current.getNextPerson();
-		}
-		current.setNextPerson(person);
-		}
-		*/
 		public Person retrieve() {
-		if (firstPerson == null) {
-			System.out.println("There is nobody in the queue to serve!");
+			if (lastElementIn == null) {
+				System.out.println("There's nobody to serve");
+				return null;
+			}
+			if (lastElementIn.getnextPerson == null) {
+				Person result = lastElementIn;
+				lastElementIn = null;
+				return result;
+			}
+			while(lastElementIn.getnextPerson.getNextPerson != null) {
+				
+			}
+		
 		}
-			firstPerson = firstPerson.getNextPerson();
-			return firstPerson;
-		}
-		}
-	
+	}
+		
