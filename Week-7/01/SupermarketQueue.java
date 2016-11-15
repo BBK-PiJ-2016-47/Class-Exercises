@@ -1,28 +1,28 @@
 	public class SupermarketQueue implements PersonQueue {
-		private Person lastElementIn = null;
+		private Person lastPersonIn = null;
 		
 		public void insert(Person person) {
-			if (lastElementIn == null) {
-				lastElementIn = person;
+			if (lastPersonIn == null) {
+				lastPersonIn = person;
 				return;
 			}
 		
-			person.nextPerson = lastElementIn;
-			lastElementIn = person;
+			person.nextPerson = lastPersonIn;
+			lastPersonIn = person;
 		}
 		
 		public Person retrieve() {
-			if (lastElementIn == null) {
+			if (lastPersonIn == null) {
 				System.out.println("There's nobody to serve");
 				return null;
 			}
-			if (lastElementIn.getnextPerson == null) {
-				Person result = lastElementIn;
-				lastElementIn = null;
+			if (lastPersonIn.getnextPerson == null) {
+				Person result = lastPersonIn;
+				lastPersonIn = null;
 				return result;
 			}
-			while(lastElementIn.getnextPerson.getNextPerson != null) {
-				
+			while(lastPersonIn.getnextPerson.getNextPerson != null) {
+				person.setNextPerson(person.getNextPerson.getNextPerson);
 			}
 		
 		}
