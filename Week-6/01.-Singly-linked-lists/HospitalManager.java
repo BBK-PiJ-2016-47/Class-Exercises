@@ -1,7 +1,7 @@
 public class HospitalManager {
  // this is a member method of class HospitalManager
  // returns true if the patient was found and removed, false otherwise
-	private Patient firstPatient = null;
+	private Patient head = null;
 	private boolean finished = false;
 	private int numPatients = 0;
 
@@ -40,8 +40,8 @@ public class HospitalManager {
 	}
 	// this is a member method of class HospitalManager
 	public void addPatient(Patient newPatient) {
-		if (firstPatient == null) {
-			firstPatient = newPatient;
+		if (head == null) {
+			head = newPatient;
 			return;
 		}
 		Patient current = this.firstPatient;
@@ -55,16 +55,16 @@ public class HospitalManager {
 	
  
 	public boolean deletePatient(String name) {
-		if (firstPatient == null) {
+		if (head == null) {
 		// list is empty, nothing to remove
 		return false;
 			}
-		if (firstPatient.getName().equals(name)) {
+		if (head.getName().equals(name)) {
 			// first patient in the list must be removed
-			firstPatient = firstPatient.getNextPatient();
+			head = head.getNextPatient();
 			return true;
 			}
-		Patient current = firstPatient;
+		Patient current = head;
 		while (current.getNextPatient() != null) {
 			if (current.getNextPatient().getName().equals(name)) {
 			// We found it! It is the next one!
@@ -95,7 +95,7 @@ public class HospitalManager {
 	}
 	
 	public void printPatientList() {
-		Patient patient = firstPatient;
+		Patient patient = head;
 		boolean isFirst = true;
 		int count = 1; 
 		if (patient == null) {
