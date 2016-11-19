@@ -7,12 +7,11 @@ than letter on a different line.
 
 println "Please write some text: "
 String input = System.console().readLine()
-int leng = input.length()
-char[leng] inputArray = input.toCharArray
+int size = input.length();
 
 int i = 0;
 
-while (i<leng) {
-println char[i]
-
-}
+	while (i<size) {
+		println input.charAt(i);
+		i++;
+	}
