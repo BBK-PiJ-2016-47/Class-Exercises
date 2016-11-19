@@ -12,6 +12,7 @@ Write a small Groovy or Java Decaf program that uses all the methods of Calculat
 public class Calculator {
   private int x;
   private int y;
+  
   public Calculator(int x, int y) {
     this.x = x;
     this.y = y;
@@ -24,16 +25,19 @@ public class Calculator {
   }
   public int add(int x, int y) {
   int addResult = (x + y);
+  System.out.println(x + " plus " + y + " equals " + addResult);  
   return addResult;
   }
 
   public int subtract(int x, int y) {
   int subtractResult = (this.x - this.y);
+  System.out.println(x + " minus " + y + " equals " + subtractResult);
   return subtractResult;
   }
 
   public int multiply(int x, int y) {
   int multiplyResult = (this.x * this.y);
+  System.out.println(x + " times " + y + " equals " + multiplyResult);
   return multiplyResult;
   }
 
@@ -41,6 +45,7 @@ public class Calculator {
   double n = (double) this.x;
   double q = (double) this.y;
   double divideResult = (n / q);
+  System.out.println(x + " divided " + y + " equals " + divideResult);
   return divideResult;
   }
 

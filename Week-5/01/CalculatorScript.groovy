@@ -1,10 +1,10 @@
-Calculator calculator = new Calculator;
+Calculator myCalculator = new Calculator(10, 5);
 
 
-calculator.add(4,5);
+myCalculator.add(4,5);
 
-calculator.subtract(10,5);
+myCalculator.subtract(10,5);
 
-calculator.multiply(10,5);
+myCalculator.multiply(10,5);
 
-calculator.divide(10,5);
+myCalculator.divide(10,5);
