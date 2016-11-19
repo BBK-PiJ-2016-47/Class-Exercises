@@ -23,6 +23,46 @@ void binary2decimal(String x) {
  print x + " into decimal is " + result;
 }
 
-print "Please enter a binary number: "
-String binary = System.console().readLine();
-binary2decimal(binary); 
+
+
+void decimal2binary (int x) {
+	String reverseBinaryNum = "";
+		while (x > 0) {
+			int remainder = x % 2;
+			reverseBinaryNum = reverseBinaryNum + remainder;
+			x = (x/2);
+		}	
+	length = reverseBinaryNum.length();
+	String binaryNum = 0;
+		for ( int i = length - 1 ; i >= 0 ; i-- ) {
+			binaryNum = binaryNum + reverseBinaryNum.charAt(i);
+		}
+	println binaryNum;
+}
+
+println "What would you like to do?"
+println "1. Covert a binary number to a decimal number"
+println "2. Convert a decimal number to a binary number"
+int choice = Integer.parseInt(System.console().readLine());
+
+switch (choice) {
+	case 1: 
+		print "Please enter a binary number: "
+		String binary = System.console().readLine();
+		binary2decimal(binary); 
+		break;
+	case 2: 
+		print "Please enter a decimal number: "
+		int num = Integer.parseInt(System.console().readLine());
+		decimal2binary(num);
+		break;
+	default:
+		println "Sorry, that wasn't recognised. Please enter a number 1 or 2."
+		break;
+	}
+
+
+
+
+
+
