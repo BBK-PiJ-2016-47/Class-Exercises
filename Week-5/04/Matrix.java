@@ -1,7 +1,11 @@
 public class Matrix {
   private int [] [] Arr;
+  private int row;
+  private int column;
 
   public Matrix (int row, int column) {
+    this.row = row;
+    this.column = column;
     Arr = new int[row][column];
     for(int i = 0; i < row; i++) {
       for(int j = 0; j < column; j++) {
@@ -19,13 +23,24 @@ public class Matrix {
       Arr[row][column] = elem;
     }
   }
-
+/*
   public void setRow(int rowNum,String input) {
-    
+    if (rowNum > this.row) {
+      System.out.println("That's too many rows!");
+    } else {
+      int [] temp = input.split(",");
+
+    }
 
   }
-
+*/
   public void setColumn(int colNum, String input) {
+    if (colNum > this.column) {
+      System.out.println("That's too many columns!");
+    } else {
+    
+
+    }
 
   }
 
@@ -45,7 +60,7 @@ public class Matrix {
   public void prettyPrint() {
       for(int i = 0; i < Arr.length; i++) {
       for(int j = 0; j < Arr[i].length; j++) {
-       System.out.println(Arr[i][j]); 
+       System.out.print(Arr[i][j] + ", "); 
       }
     }
   }
