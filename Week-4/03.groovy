@@ -11,12 +11,17 @@ int power(int b, int e) {
 int power2(int n) {
   return power(2,n);
  }
-
+ 
 void binary2decimal(String x) {
+
   int size = x.length();
   int result = 0;
+  String num = "";
+	for (int i = size - 1 ; i >= 0 ; i--) {
+		num = num + x.charAt(i);
+	}
   for(int i = 0; i < size; i++) {
-		if (x.charAt(i) == "1"){
+		if (num.charAt(i) == "1"){
 			result = result + power2(i);
 		}
   }
@@ -34,7 +39,7 @@ void decimal2binary (int x) {
 		}	
 	length = reverseBinaryNum.length();
 	String binaryNum = 0;
-		for ( int i = length - 1 ; i >= 0 ; i-- ) {
+		for (int i = length - 1 ; i >= 0 ; i--) {
 			binaryNum = binaryNum + reverseBinaryNum.charAt(i);
 		}
 	println binaryNum;
