@@ -6,13 +6,13 @@ then say how many times you can find the letter in the text.
 */
 
 println "Please type in a word: "
-String input = System.console().readLine()
+String input = System.console().readLine();
 
-int inputleng = input.length();
+int size = input.length();
 int counter = 0;
-  for(int i = 0; i <= inputleng; i++) {
+  for(int i = 0; i <  size; i++) {
     if(input.charAt(i) == "c") {
-    counter++
+    counter++;
   }
 }
 
