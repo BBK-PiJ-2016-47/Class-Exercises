@@ -1,5 +1,5 @@
 public class PersonQueueScript {
-	
+		private SupermarketQueue niceQueue = new SupermarketQueue();
 		Person firstPerson = new Person("Bob", 12.50);
 		Person nextPerson = new Person("Jan", 19.0);
 		Person anotherPerson = new Person("Ralph", 14.63);
@@ -12,15 +12,16 @@ public class PersonQueueScript {
 	public void run(){
 		System.out.println("Supermarket Queue!");
 		Supermarket mySupermarket = new Supermarket();
-		printQueue();
+		niceQueue.printQueue();
 		
 		System.out.println("Adding Bob");
 		mySupermarket.addPerson(firstPerson);
-		printQueue();
+		niceQueue.printQueue();
 		
 		System.out.println("Adding Jan");
 		mySupermarket.addPerson(nextPerson);
-		printQueue();
+		niceQueue.printQueue();
+		mySupermarket.servePerson();
 	}
 
 }
