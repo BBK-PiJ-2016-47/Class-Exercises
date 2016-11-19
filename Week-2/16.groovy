@@ -13,45 +13,47 @@ int player2score = 0;
 		println "Please enter your selection and your opponent's selection: "
 		String plays = System.console().readLine();
 
+		String player1 = plays.substring(0,1);
+		String player2 = plays.substring(1,2);
 
-			if ((plays.substring(0,1) == P) && (plays.substring(1,2) == P)) {
+			if ((player1 == "P") && (player2 == "P")) {
 				println "It's a draw, play again!"
 			}
 
-			if ((plays.substring(0,1) == P) && (plays.substring(1,2) == R)) {
+			if ((player1 == "P") && (player2 == "R")) {
 				println "Player 1 wins the point!"
 				player1score++;
 			}
 
-			if ((plays.substring(0,1) == P) && (plays.substring(1,2) == S)) {
+			if ((player1 == "P") && (player2 == "S")) {
 				println "Player 2 wins the point!"
 				player2score++;
 			}
 
-			if ((plays.substring(0,1) == R) && (plays.substring(1,2) == R)) {
+			if ((player1 == "R") && (player2 == "R")) {
 				println "It's a draw, play again!"
 			}
 
-			if ((plays.substring(0,1) == R) && (plays.substring(1,2) == P)) {
+			if ((player1 == "R") && (player2 == "P")) {
 				println "Player 2 wins the point!"
 				player2score++;
 			}
 
-			if ((plays.substring(0,1) == R) && (plays.substring(1,2) == S)) {
+			if ((player1 == "R") && (player2 == "S")) {
 				println "Player 1 wins the point!"
 				player1score++;
 			}
 
-			if ((plays.substring(0,1) == S) && (plays.substring(1,2) == S)) {
+			if ((player1 == "S") && (player2 == "S")) {
 				println "It's a draw, play again!"
 			}
 
-			if ((plays.substring(0,1) == S) && (plays.substring(1,2) == P)) {
+			if ((player1 == "S") && (player2 == "P")) {
 				println "Player 1 wins the point!"
 				player1score++;
 			}
 
-			if ((plays.substring(0,1) == S) && (plays.substring(1,2) == R)) {
+			if ((player1 == "S") && (player2 == "R")) {
 				println "Player 2 wins the point!"
 				player2score++;
 			}
