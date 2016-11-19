@@ -8,10 +8,11 @@ println "Welcome to Rock Paper Scissors!"
 
 int player1score = 0;
 int player2score = 0;
+boolean keepPlaying = true;
 
-	while ((player1score < 3) || (player2score < 3)) {
+	while (keepPlaying) {
 		println "Please enter your selection and your opponent's selection: "
-		String plays = System.console().readLine();
+		String plays = System.console().readLine().toUpperCase();
 
 		String player1 = plays.substring(0,1);
 		String player2 = plays.substring(1,2);
@@ -57,11 +58,18 @@ int player2score = 0;
 				println "Player 2 wins the point!"
 				player2score++;
 			}
-		
+		println "Player 1: " + player1score + "\nPlayer 2: " + player2score
+			if (player1score >= 3) {
+				keepPlaying = false;
+			} else if (player2score >= 3) {
+				keepPlaying = false;
+			} else {
+				keepPlaying = true;
+			}
 	}
 
 	if (player1score > player2score) {
-		println "Player 1 wins! \n Player 1 scored " + player1score + " points. \n Player 2 scored " + player2score + "points."
+		println "Player 1 wins! \nPlayer 1 scored " + player1score + " points. \nPlayer 2 scored " + player2score + " points."
 	} else {
-		println "Player 2 wins! \n Player 1 scored " + player1score + " points. \n Player 2 scored " + player2score + "points."
+		println "Player 2 wins! \nPlayer 1 scored " + player1score + " points. \nPlayer 2 scored " + player2score + " points."
 	}
