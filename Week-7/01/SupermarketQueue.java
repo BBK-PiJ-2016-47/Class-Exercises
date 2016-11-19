@@ -30,26 +30,5 @@
 			return next;
 		
 		}
-		
-			
-		public void printQueue() {
-			Person person = lastPersonIn;
-			boolean isFirst = true;
-			int count = 1; 
-			if (person == null) {
-				System.out.println("Nothing to print");
-				return;
-			}
-			do{
-				if (!isFirst) {
-					lastPersonIn = person.getNextPerson();
-				}
-				System.out.println("Person " + count);
-				System.out.println("Name   : " + person.getName());
-				System.out.println("Shop cost: " + person.getShopCost());
-				count++;
-				isFirst = false;
-			} while(person.getNextPerson() != null);
-		}
 	}
 		
