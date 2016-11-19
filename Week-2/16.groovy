@@ -1,0 +1,65 @@
+/*16 Rock, Paper, Scissors (*)
+Write a program that reads 2 characters from either the keyboard or a file. The characters are either PP, PR, PS, RP,
+RR, RS, SP, SR, or SS. They correspond to the selections made by 2 players playing the game of rock-paper-scissors.
+Make the program accept inputs until one player’s score is more than 3 points ahead of the other.
+Hint: remember that you can use .substring() to get the elements of a String. */
+
+println "Welcome to Rock Paper Scissors!"
+
+int player1score = 0;
+int player2score = 0;
+
+	while ((player1score < 3) || (player2score < 3)) {
+		println "Please enter your selection and your opponent's selection: "
+		String plays = System.console().readLine();
+
+
+			if ((plays.substring(0,1) == P) && (plays.substring(1,2) == P)) {
+				println "It's a draw, play again!"
+			}
+
+			if ((plays.substring(0,1) == P) && (plays.substring(1,2) == R)) {
+				println "Player 1 wins the point!"
+				player1score++;
+			}
+
+			if ((plays.substring(0,1) == P) && (plays.substring(1,2) == S)) {
+				println "Player 2 wins the point!"
+				player2score++;
+			}
+
+			if ((plays.substring(0,1) == R) && (plays.substring(1,2) == R)) {
+				println "It's a draw, play again!"
+			}
+
+			if ((plays.substring(0,1) == R) && (plays.substring(1,2) == P)) {
+				println "Player 2 wins the point!"
+				player2score++;
+			}
+
+			if ((plays.substring(0,1) == R) && (plays.substring(1,2) == S)) {
+				println "Player 1 wins the point!"
+				player1score++;
+			}
+
+			if ((plays.substring(0,1) == S) && (plays.substring(1,2) == S)) {
+				println "It's a draw, play again!"
+			}
+
+			if ((plays.substring(0,1) == S) && (plays.substring(1,2) == P)) {
+				println "Player 1 wins the point!"
+				player1score++;
+			}
+
+			if ((plays.substring(0,1) == S) && (plays.substring(1,2) == R)) {
+				println "Player 2 wins the point!"
+				player2score++;
+			}
+		
+	}
+
+	if (player1score > player2score) {
+		println "Player 1 wins! \n Player 1 scored " + player1score + " points. \n Player 2 scored " + player2score + "points."
+	} else {
+		println "Player 2 wins! \n Player 1 scored " + player1score + " points. \n Player 2 scored " + player2score + "points."
+	}
