@@ -1,27 +1,19 @@
-/* Palindrome
-A palindrome is a word, phrase, number, or other sequence of units that may be read the same way in either
-direction. Examples of strict palindromes include “ABBA”, “madam”, “radar”, “kayak”, and “step on no pets”.
-Write a program that reads a text and detects whether the text is a strict palindrome.
-*/
+/*Palindrome creator
+Write a program that reads a text and then writes on the screen a palindrome by writing the same text followed
+by the same text in reversed order. For example, if the user enters the text “It was a dark and stormy night” the
+program must output “It was a dark and stormy nightthgin ymrots dna krad a saw tI”.*/
 
 print "Please enter a word: "
 String input = System.console().readLine();
 
-int size = input.length() - 1;
+int size = input.length();
 int i = 0;
 boolean isPalindrome = true;
+String palindrome = input;
 	while (i < size) {
-		if (input.charAt(i) == input.charAt(size)) {
-			i++;
-			size--;
-		} else {
-			isPalindrome = false;
-			break;
-		}
+		palindrome = palindrome + input.charAt(size-1);
+		size--;
 	}
-	if (isPalindrome) {
-		println input + " is a palindrome!"
-	} else {
-		println input + " is not a palindrome."
-	}
+	
+println palindrome;
 
