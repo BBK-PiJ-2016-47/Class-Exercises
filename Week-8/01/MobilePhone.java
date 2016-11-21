@@ -5,11 +5,12 @@ public class MobilePhone extends OldPhone {
 	@Override
 	public void call(String number){
 		super.call(number);
-		lastNumbersCalled[called-1] = number;
 		if (called <= 10) {
+			lastNumbersCalled[called-1] = number;
 			called++;
 		} else {
-			called = 0;
+			called = 1;
+			lastNumbersCalled[called-1] = number;
 			
 		}
 		
