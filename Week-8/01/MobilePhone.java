@@ -1,6 +1,20 @@
 public class MobilePhone extends OldPhone {
-	private NumbersCalled lastNumberCalled = null;
+	private int called = 1;
+	private String[] lastNumbersCalled = new String[10];
 	
+	@Override
+	public void call(String number){
+		super.call(number);
+		lastNumbersCalled[called-1] = number;
+		if (called <= 10) {
+			called++;
+		} else {
+			called = 0;
+			
+		}
+		
+		
+	}
 
 	public void ringAlarm(String alarm){
 		System.out.println("The alarm is set for " + alarm);
@@ -11,33 +25,9 @@ public class MobilePhone extends OldPhone {
 	}
 
 	public void printLastNumbers() {
-		NumbersCalled number = lastNumberCalled;
-		boolean isFirst = true;
-		
-		if(lastNumberCalled == null) {
-			System.out.println("No numbers have been called!");
-			return;
+		for (int i = 0; i<10; i++) {
+			System.out.println(lastNumbersCalled[called - i]);
 		}
-		do{ if(!isFirst) {
-			number = number.getNextNumberCalled();
-		}
-		System.out.println(number.getNumber());
-		isFirst = false;	
-		
-		} while(number.getNextNumberCalled() != null);
 		
 	}
-		
-		
-		
-	public void addNumber(NumbersCalled number) {
-		if (lastNumberCalled == null) {
-				lastNumberCalled = number;
-				return;
-			}
-			
-			number.setNextNumberCalled(lastNumberCalled);
-			lastNumberCalled = number;
-	}
-	
 }
