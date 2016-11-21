@@ -6,12 +6,12 @@ public class PhoneLauncher {
 	
 	public void launch() {
 		SmartPhone mySmartPhone = new SmartPhone();
-		mySmartPhone.playGame("Snake");
-		
-		for(int i = 0; i<10; i++) {
+		for(int i = 0; i<5; i++) {
 		mySmartPhone.call("01516326147");
+		mySmartPhone.call("01392648794");
 		}
 		
-		mySmartPhone.printLastNumbers();
+		mySmartPhone.playGame("Snake");	
+	
 	}
 }
