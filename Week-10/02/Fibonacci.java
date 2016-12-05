@@ -14,9 +14,10 @@ public class Fibonacci {
 			System.out.println("The Fibonacci number at " + n + " is 1");
 			return 1;
 		} else {
-			int firstFib = 1;
-			int secondFib = 1;
-			int result = 0;
+			private int firstFib = 1;
+			private int secondFib = 1;
+			private int result = 0;
+			
 				for(int x = 3; x <= n; x++) {
 					result = firstFib + secondFib;
 					firstFib = secondFib;
