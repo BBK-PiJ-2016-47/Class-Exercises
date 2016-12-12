@@ -72,21 +72,23 @@ public class IntegerTreeNode {
 	}
 	
 	
-	public String toString() {
+		public String toString() {
 		int element = this.value;
-		String print = "" + element;
-		System.out.print("[" + print);
+		String print = element + ",";
+		System.out.print(print);
 		
 		if (left == null) {
-			System.out.print("L[]");
+			print = print + "[] ";
 		} else {
-			return this.left.toString();
+			print = print + "," + left.value;
+			return left.toString();
 		}
 		
 		if (right == null) {
-			System.out.print("R[]");
+			print = print + "[] ";
 		} else {
-			return this.right.toString();
+			print = print + "," + right.value;
+			return right.toString();
 		}
 		
 		return print;
