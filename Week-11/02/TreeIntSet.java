@@ -48,7 +48,7 @@ public class TreeIntSet implements IntSet {
 	}
 	
 	public boolean containsVerbose(int n) {
-		
+		System.out.println("Number checked: " + this.value);
 		if (n == this.value) {
 			System.out.println("Number checked: " + this.value);
 			System.out.println("The tree does contain " + n);
@@ -58,7 +58,7 @@ public class TreeIntSet implements IntSet {
 				System.out.println("The tree does not contain " + n);
 				return false;
 			} else {
-				System.out.println("Number checked: " + this.value);
+				System.out.println("Number checked: " + right.value);
 				return right.contains(n);
 			}
 		} else {
@@ -66,7 +66,7 @@ public class TreeIntSet implements IntSet {
 				System.out.println("The tree does not contain " + n);
 				return false;
 			} else {
-				System.out.println("Number checked: " + this.value);
+				System.out.println("Number checked: " + left.value);
 				return left.contains(n);
 			}
 		}
