@@ -1,14 +1,15 @@
 
 ArraySource source = new ArraySource()
-int[] symetricalArray = source.symetricalArray
-int[] nonSymetricalArray = source.nonSymetricalArray 
+
+int[] symmetricalArray = source.symmetricalArray
+int[] nonSymmetricalArray = source.nonSymmetricalArray 
 
 ArrayChecker myChecker = new ArrayChecker()
 print "First array: "
-int[] arrayToPrint = myChecker.checkAndReverse(symetricalArray)
+int[] arrayToPrint = myChecker.checkAndReverse(symmetricalArray)
 myChecker.printArray(arrayToPrint)
 print "Second array: " 
-arrayToPrint = myChecker.checkAndReverse(nonSymetricalArray)
+arrayToPrint = myChecker.checkAndReverse(nonSymmetricalArray)
 myChecker.printArray(arrayToPrint)
 
 

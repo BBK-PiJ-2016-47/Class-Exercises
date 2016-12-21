@@ -4,9 +4,11 @@ public class ArrayChecker {
       int leng = anArray.length;
       for (int i = 0; i < leng / 2; i++) {
           if (anArray[i] != anArray[leng- i - 1]) {
+			  System.out.println("Array is not symmetrical!");
               return false;
           }
       }
+	  System.out.println("Array is symmetrical!");
       return true;
   }
 
@@ -16,6 +18,7 @@ public class ArrayChecker {
       for (int i = 0; i < leng; i++) {
           result[leng - i - 1] = anArray[i];
       }
+	  System.out.println("Reversed array: ");
       return result;
   }
 
