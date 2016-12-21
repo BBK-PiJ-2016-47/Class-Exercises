@@ -25,7 +25,7 @@ public class Matrix {
       Arr[row][column] = elem;
     }
   }
-
+/*
   public void setRow(int rowNum, String input) {
     if (rowNum > this.row) {
       System.out.println("That's too many rows!");
@@ -40,7 +40,7 @@ public class Matrix {
     }
 
   }
-/*
+
   public void setColumn(int colNum, String input) {
     if (colNum > this.column) {
       System.out.println("That's too many columns!");
@@ -59,7 +59,9 @@ public class Matrix {
       for(int j = 0; j < columns; j++) {
        strArr = strArr + Arr[i][j] + ",";   
       }
-	  strArr = strArr + ";";
+	  int leng = strArr.length();
+	  strArr = strArr.substring(0,(leng-1));
+	  strArr = strArr + "; ";
     }
     strArr = strArr + "]";
     return strArr;
