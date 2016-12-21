@@ -1,10 +1,10 @@
-Matrix firstTry = new Matrix(3,4);
+Matrix firstTry = new Matrix(4,4);
 
-firstTry.setElement(1,2,3);
-firstTry.setElement(5,2,4);
-firstTry.setElement(2,6,1);
+firstTry.setElement(1,2,96);
+firstTry.setElement(3,2,198);
+firstTry.setElement(2,3,2847);
 
-
+firstTry.setRow(0, "45,56,23,65");
 String firstStr = firstTry.toString();
 println firstStr;
 
