@@ -4,6 +4,7 @@ public class HospitalManager {
 	private Patient head = null;
 	private boolean finished = false;
 	private int numPatients = 0;
+	private int count = 0;
 
 	public void run() {
 	    System.out.println("===Hospital Manager===");
@@ -44,13 +45,14 @@ public class HospitalManager {
 			head = newPatient;
 			return;
 		}
-		Patient current = this.firstPatient;
+		Patient current = this.head;
 		while (current.getNextPatient() != null) {
 		// this means we are not yet at the end of the list
 		current = current.getNextPatient();
 		}
 		// at this point, current points to the last patient
 		current.setNextPatient(newPatient);
+		count++;
 	}
 	
  
@@ -73,6 +75,7 @@ public class HospitalManager {
 			return true;
 			}
 			current = current.getNextPatient();
+			count--;
 		}
 		return false;
 	}
@@ -97,21 +100,23 @@ public class HospitalManager {
 	public void printPatientList() {
 		Patient patient = head;
 		boolean isFirst = true;
-		int count = 1; 
 		if (patient == null) {
 			System.out.println("Nothing to print");
 			return;
 		}
+		int counter = 1;
 		do{
 			if (!isFirst) {
 				patient = patient.getNextPatient();
 			}
-			System.out.println("Patient " + count);
+			
+			System.out.println("Patient " + counter);
 			System.out.println("Name   : " + patient.getName());
 			System.out.println("Illness: " + patient.getIllness());
 			System.out.println("Age    : " + patient.getAge());
-			count++;
 			isFirst = false;
+			counter++;
 		} while(patient.getNextPatient() != null);
 	}
 }
+	
