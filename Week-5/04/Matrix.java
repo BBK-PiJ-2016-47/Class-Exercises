@@ -32,18 +32,21 @@ public class Matrix {
     } else {
 		int strLength = input.length();
 		int counter = 1;
-		char charac = 'a';
+		char charac = '\0';
+		String comma = "";
 			for (int i = 0; i < strLength; i++) {
 				charac = input.charAt(i);
-				if (charac.equals(",")) {
+				comma = String.valueOf(charac);
+				if (comma.equals(",")) {
 					counter++;
 			}
-		String [] strArr = input.split(",");
+		String [] strArr = new String [counter];
+		strArr = input.split(",");
 		
-	  int [] intArr = new Array[counter];
-	  int i = rowNum;
+	  int [] intArr = new int[counter];
+	  int j = rowNum;
 		for (int n = 0; n < counter; n++) {
-			intArr[i][n] = Integer.parseInt(strArr[n]);
+			intArr[j][n] = Integer.parseInt(strArr[n]);
 		}
     }
 
