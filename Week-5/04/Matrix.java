@@ -25,22 +25,31 @@ public class Matrix {
       Arr[row][column] = elem;
     }
   }
-/*
+
   public void setRow(int rowNum, String input) {
     if (rowNum > this.row) {
-      System.out.println("That's too many rows!");
+		System.out.println("This row doesn't exist!");
     } else {
-      String [] strArr = input.split(",");
-	  int arrayLength = strArr.length();
-	  int [] intArr = new Array[arrayLength];
+		int strLength = input.length();
+		int counter = 1;
+		char charac = 'a';
+			for (int i = 0; i < strLength; i++) {
+				charac = input.charAt(i);
+				if (charac.equals(",")) {
+					counter++;
+			}
+		String [] strArr = input.split(",");
+		
+	  int [] intArr = new Array[counter];
 	  int i = rowNum;
-		for (int n = 0; n < arrayLength; n++) {
+		for (int n = 0; n < counter; n++) {
 			intArr[i][n] = Integer.parseInt(strArr[n]);
 		}
     }
 
   }
-
+  }
+/*
   public void setColumn(int colNum, String input) {
     if (colNum > this.column) {
       System.out.println("That's too many columns!");
