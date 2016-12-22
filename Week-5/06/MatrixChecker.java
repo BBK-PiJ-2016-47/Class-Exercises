@@ -30,8 +30,18 @@ public class MatrixChecker {
 }
 	
 	public boolean isTriangular(int[][] aMatrix) {
-		return true;
-	
+		int rows = aMatrix.length;
+		int cols = aMatrix[0].length;
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				if (i > j && aMatrix[i][j] == 0) {
+					System.out.println("The matrix is Triangular!");
+					return true;
+				}
+			}
+		}
+		System.out.println("The matrix is not Triangular!");
+		return false;
 	}
 
 
