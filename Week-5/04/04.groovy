@@ -4,7 +4,9 @@ firstTry.setElement(1,2,96);
 firstTry.setElement(3,2,198);
 firstTry.setElement(2,3,2847);
 
-//firstTry.setRow(0, "45,56,23,65");
+firstTry.setRow(0, "45,56,23,65");
+firstTry.prettyPrint();
+
 String firstStr = firstTry.toString();
 println firstStr;
 

@@ -34,23 +34,22 @@ public class Matrix {
 		int counter = 1;
 		char charac = '\0';
 		String comma = "";
-			for (int i = 0; i < strLength; i++) {
-				charac = input.charAt(i);
-				comma = String.valueOf(charac);
-				if (comma.equals(",")) {
-					counter++;
+		for (int i = 0; i < strLength; i++) {
+			charac = input.charAt(i);
+			comma = String.valueOf(charac);
+			if (comma.equals(",")) {
+				counter++;
+				}
 			}
-		String [] strArr = new String [counter];
-		strArr = input.split(",");
-		
-	  int [] intArr = new int[counter];
-	  int j = rowNum;
-		for (int n = 0; n < counter; n++) {
-			intArr[j][n] = Integer.parseInt(strArr[n]);
-		}
-    }
-
-  }
+			String [] strArr = new String [counter];
+			strArr = input.split(",");
+			int [][] intArr = new int[rowNum][counter];
+			int j = rowNum;
+			for (int n = 0; n < counter; n++) {
+				//not sure this is right (doesn't state row)
+				intArr[j][n] = Integer.parseInt(strArr[n]);
+			}
+	}
   }
 /*
   public void setColumn(int colNum, String input) {
