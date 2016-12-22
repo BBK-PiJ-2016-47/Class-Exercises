@@ -1,3 +1,4 @@
+public class HospitalLauncher03 {
 	public static void main(String args[]) {
 		HospitalLauncher test = new HospitalLauncher();
 		test.run();	
