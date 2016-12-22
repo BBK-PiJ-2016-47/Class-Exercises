@@ -25,6 +25,38 @@ public class HospitalManager03 {
 	
  
 	public boolean deletePatient(String name) {
+				if (head == null) {
+		// list is empty, nothing to remove
+		return false;
+			}
+		if (head.getName().equals(name)) {
+			// first patient in the list must be removed
+			head = head.getNextPatient();
+			System.out.println("Patient deleted!");
+			return true;
+			}
+		Patient current = head;
+		while (current.getNextPatient() != null) {
+			if (current.getNextPatient().getName().equals(name)) {
+			// We found it! It is the next one!
+			// Now link this patient to the one after the next
+			current.setNextPatient(current.getNextPatient().getNextPatient());
+			
+			
+			
+			
+			if (current.getPreviousPatient().getPreviousPatient() != null) {
+			current.setPreviousPatient(current.getPreviousPatient().getPreviousPatient());
+			}
+			System.out.println("Patient deleted!");
+			return true;
+			}
+			current = current.getNextPatient();
+			count--;
+		}
+		System.out.println("Patient not deleted!");
+		return false;
+		/* Sergio code
 		if (head == null) {
 		return false;
 		}
@@ -50,7 +82,7 @@ public class HospitalManager03 {
 		current = current.getPreviousPatient();
 		current = current.getPreviousPatient();
 		}
-		return true;
+		return true;*/
 	}
 	
 	public void printPatientList() {

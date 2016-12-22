@@ -16,20 +16,17 @@ public class MatrixChecker {
 	public boolean isSymmetrical(int[][] aMatrix) {
 		int rows = aMatrix.length;
 		int cols = aMatrix[0].length;
-		for (int i = 0; i < rows / 2; i++) {
-			for (int j = 0; j < cols / 2; j++) {
-			if (aMatrix[i][j] != aMatrix[j][i]) {
-				System.out.println("Matrix is not symmetrical!");
-				return false;
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				if (aMatrix[i][j] != aMatrix[j][i]) {
+					System.out.println("Matrix is not symmetrical!");
+					return false;
+				}
 			}
+
 		}
-	}
-	
-			
 	System.out.println("Matrix is symmetrical!");
-	return true;
-	
-		
+	return true;			
 }
 	
 	public boolean isTriangular(int[][] aMatrix) {
