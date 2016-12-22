@@ -27,7 +27,9 @@ public class Matrix {
   }
 
   public void setRow(int rowNum, String input) {
-    if (rowNum > this.row) {
+	int rows = this.row;
+	int columns = this.column;
+    if (rowNum > rows) {
 		System.out.println("This row doesn't exist!");
     } else {
 		int strLength = input.length();
@@ -43,25 +45,40 @@ public class Matrix {
 			}
 			String [] strArr = new String [counter];
 			strArr = input.split(",");
-			int [][] intArr = new int[rowNum][counter];
 			int j = rowNum;
 			for (int n = 0; n < counter; n++) {
-				//not sure this is right (doesn't state row)
-				intArr[j][n] = Integer.parseInt(strArr[n]);
+				Arr[j][n] = Integer.parseInt(strArr[n]);
 			}
 	}
   }
-/*
+
   public void setColumn(int colNum, String input) {
     if (colNum > this.column) {
       System.out.println("That's too many columns!");
     } else {
-    
+    int strLength = input.length();
+		int counter = 1;
+		char charac = '\0';
+		String comma = "";
+		for (int i = 0; i < strLength; i++) {
+			charac = input.charAt(i);
+			comma = String.valueOf(charac);
+			if (comma.equals(",")) {
+				counter++;
+				}
+			}
+			String [] strArr = new String [counter];
+			strArr = input.split(",");
+			int j = colNum;
+			for (int n = 0; n < counter; n++) {
+				Arr[n][j] = Integer.parseInt(strArr[n]);
+			}
+	
 
     }
 
   }
-*/
+
   public String toString() {
 	int rows = this.row;
 	int columns = this.column;
