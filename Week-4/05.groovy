@@ -40,16 +40,16 @@ class Point {
 	
 	//returns a copy of the current point with the same coordinates
 	Point clone() {
-		Point copy = new Point();
+		Point copy = new Point(0,0);
 		copy.x = this.x
 		copy.y = this.y
 		println "The new point is at " + copy.x + " and " + copy.y
 		return copy;
 	}
 	
-	//returns a copy of the current point with the coordinates multiplied by −1
+	//returns a copy of the current point with the coordinates multiplied by -1
 	void opposite() {
-		Point copy = new Point();
+		Point copy = new Point(0,0);
 		copy.x = (this.x * -1)
 		copy.y = (this.y * -1)
 		println "The opposite coordinates are " + copy.x + " and " + copy.y
@@ -64,6 +64,5 @@ test.distanceTo(diffPoint)
 //test.distanceToOrigin(); null exception happens
 test.moveTo(8.1,7.0);
 test.moveTo(diffPoint);
-//test.clone(); can't find matching constructor
-//test.opposite(); can't find matching constructor
-
+test.clone();
+test.opposite();
