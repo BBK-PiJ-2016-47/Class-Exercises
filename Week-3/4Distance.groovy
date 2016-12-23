@@ -1,3 +1,16 @@
+class Point {
+	double x;
+	double y;
+}
+print "Please enter the first point's x coordinate: "
+s = System.console().readLine()
+Point point1 = new Point();
+point1.x = Double.parseDouble(s)
+
+print "Please enter the first point's y coordinate: "
+s = System.console().readLine()
+point1.y = Double.parseDouble(s)
+
 print "Please enter the second point's x coordinate: "
 s = System.console().readLine()
 Point point2 = new Point();
