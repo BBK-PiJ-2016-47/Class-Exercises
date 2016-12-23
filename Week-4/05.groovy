@@ -59,7 +59,7 @@ Point test = new Point(4.5, 6.7)
 Point diffPoint = new Point(3.0, 8.5)
 
 println "The distance to the new point is " + test.distanceTo(diffPoint);
-println "The distancce from the origin is " + test.distanceToOrigin();
+println "The distance from the origin is " + test.distanceToOrigin();
 test.moveTo(8.1,7.0);
 test.moveTo(diffPoint);
 test.clone();
