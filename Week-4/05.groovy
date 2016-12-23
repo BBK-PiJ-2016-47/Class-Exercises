@@ -7,20 +7,18 @@ class Point {
 	this.y = y
 	}
 	// calculates the distance to another point
-	void distanceTo(Point newPoint) {
+	double distanceTo(Point newPoint) {
 		double xSum = Math.pow((this.x - newPoint.x), 2)
 		double ySum = Math.pow((this.y - newPoint.y), 2)
 		double xySum = xSum + ySum
 		double root = Math.sqrt(xySum)
-		println "The distance is " + root
+		return root;
 		}
 		
 	//calculates the distance to origin 
-	int distanceToOrigin() {
-		Point origin = new Point(0,0);
-		println origin.x
-		println origin.y
-		int dist = distanceTo(origin)
+	double distanceToOrigin() {
+		Point origin = new Point(0.0,0.0);
+		double dist = distanceTo(origin)
 		return dist
 	}
 	
@@ -60,8 +58,8 @@ class Point {
 Point test = new Point(4.5, 6.7)
 Point diffPoint = new Point(3.0, 8.5)
 
-test.distanceTo(diffPoint)
-//test.distanceToOrigin(); null exception happens
+println "The distance to the new point is " + test.distanceTo(diffPoint);
+println "The distancce from the origin is " + test.distanceToOrigin();
 test.moveTo(8.1,7.0);
 test.moveTo(diffPoint);
 test.clone();
