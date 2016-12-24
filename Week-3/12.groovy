@@ -11,20 +11,20 @@ String sprice = System.console().readLine();
 price = Double.parseDouble(sprice);
 
 print "Please input the amount paid for the item: "
-String Spaid = System.console().readLine();
-paid = Double.parseDouble(paid);
+String spaid = System.console().readLine();
+paid = Double.parseDouble(spaid);
 
 if(price > paid) {
-  int owed = (price - paid);
+  double owed = (price - paid);
   print "You still need to pay £" + owed + " more!"
 }
 
 double zero = 0.0;
 
-int diff = (paid - price);
-print "Your change is "
-while(diff != zero) {
-
+double diff = (paid - price);
+println "Your change is: "
+while(diff != 0.0) {
+	
   if (diff > 50.00) {
     diff = diff-50.00
     println "£50 note"
@@ -55,6 +55,12 @@ while(diff != zero) {
   } else if (diff > 0.05) {
     diff = diff-0.05
     println "5p coin"
-  }
+  } else if (diff > 0.02) {
+    diff = diff-0.02
+    println "2p coin"
+	} else if (diff > 0.01) {
+    diff = diff-0.01
+    println "1p coin"
+	}
 
 }
