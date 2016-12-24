@@ -1,21 +1,24 @@
 //Print all primes up to 1000
-boolean prime = false;
+boolean prime = true;
 println "all prime numbers up to 1000"
-	for (int num = 1; num < 20; num++) {
-		for (int i = 2; i < 10; i++){
-			if (i != num) {
-				int remainder = (num % i);
-					if (remainder != 0) {
-						prime = true;
-						break;
-					}
-			}
-			if (prime){
-				println "Prime: " + num;
+	for (int num = 1; num < 1000; num++) {
+		for (int i = (num-1); i > 1; i--){
+			int remainder = (num % i);
+			if (remainder == 0) {
+				prime = false;
+				break;						
 			} 
-			num++;
+			
+
 		}
+		if (prime) {
+			println "Prime: " + num;
+			}
+			prime = true;
+			
+			
 	}
+	
 			
 			
 			
