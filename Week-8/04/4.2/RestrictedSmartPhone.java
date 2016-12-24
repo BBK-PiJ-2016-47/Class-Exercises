@@ -1,7 +1,4 @@
 public class RestrictedSmartPhone extends SmartPhone {
-	public RestrictedSmartPhone(String brand) {
-		super(brand);
-	}
 	
 	@Override
 	private void playGame(String game) {
@@ -9,3 +6,7 @@ public class RestrictedSmartPhone extends SmartPhone {
 	}
 
 }
+
+/** can't assign weaker access privileges as access 
+  * been given in the super class.
+**/  
