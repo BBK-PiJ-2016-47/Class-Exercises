@@ -10,14 +10,29 @@ you could use this code to parse the input in the cells.
 
 print "Please enter a number: "
 String num = System.console().readLine();
-int size = num.length();
 
 num = num.replace(",","");
+int size = num.length();
+String wholeNum = "";
+boolean dec = false;
 
-for (int i = 0; i < size; i++) {
-	if (num.charAt(i) == ) {
-  
-  }
-
-
+for(int i = 0; i < size; i++) {
+	if (num.charAt(i) == ".") {
+		dec = true;
+	} else {
+		wholeNum = wholeNum + num.charAt(i);
+	}
 }
+
+int wholeNumInt = Integer.parseInt(wholeNum);
+wholeNumInt = (wholeNumInt / 2);
+
+wholeNum = "" + wholeNumInt;
+
+
+if (dec) {
+	wholeNum = wholeNum.replace(".","");
+	wholeNum = wholeNum.substring(0, (wholeNum.length() - 2)) + "." + wholeNum.substring(wholeNum.length()-2);
+}
+
+print "Half of " + num + " is " + wholeNum;
