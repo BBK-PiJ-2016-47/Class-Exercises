@@ -12,11 +12,12 @@ public class HashUtilitiesTest {
 		}
 	}
 	
+	@Test
 	public void hashLowRange() {
 		HashUtilities utility = new HashUtilities();
 		for (int i = 0; i < 2000; i++) {
 			int hash = utility.shortHash(i);
-			assertTrue(hash > 0);
+			assertTrue(hash > -1);
 		}
 	}
 
