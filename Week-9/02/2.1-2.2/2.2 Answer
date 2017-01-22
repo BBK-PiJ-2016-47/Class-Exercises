@@ -1,0 +1,13 @@
+Q.
+Change the script so that the SmartPhone is created with the line:
+Mobilephone myPhone = new Smartphone();
+Compile your code again. Are there any problems? Why do this problems happen? What are the possible
+solutions?
+
+A. 
+Using Mobilephone myPhone = new SmartPhone(); means that the object
+can no longer use the methods in SmartPhone. This is because
+myPhone is of type Mobilephone, which is not an Abstract class.
+
+Could solve this by making Mobilephone an interface or
+Abstract Class
