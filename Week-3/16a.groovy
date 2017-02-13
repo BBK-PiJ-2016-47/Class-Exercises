@@ -1,7 +1,7 @@
-Ôªø/*
+/*
 Text2number
 Write a program that reads a number with commas and decimal dots (such as 
-‚Äú23,419.34‚Äù) and then prints a number that is half of it. Do not use 
+ì23,419.34î) and then prints a number that is half of it. Do not use 
 Double.parseDouble(). If you were writing a simple spreadsheet, 
 you could use this code to parse the input in the cells.
 
@@ -42,4 +42,5 @@ if (whole % 2 != 0) {
 decimal = decimal / 2;
 
 String result = whole + "." + decimal;
+System.out.println("The answer is: " + result);
 return result;
