@@ -13,6 +13,10 @@
 	   for(int i = 0; i < fileArray.length; i++) {
 		   System.out.println(fileArray[i]);
 	   }
+	   
+	   if(testDirectory != null) {
+		   testDirectory.close();
+	   }
 	 }
 	 public static void main(String[] args) {
 		 FilePrint tester = new FilePrint();
