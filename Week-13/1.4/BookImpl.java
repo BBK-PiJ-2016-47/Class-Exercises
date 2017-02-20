@@ -9,15 +9,13 @@ public class BookImpl implements Book {
 	  this.title = title;
 	  this.author = author;
   }
-   /**
-    * Gets author
-	*/
+
+  @Override
   public String getAuthor() {
 	  return author;
   }
-  /**
-    * Gets title
-	*/
+
+  @Override
   public String getTitle() {
 	  return title;
   }
