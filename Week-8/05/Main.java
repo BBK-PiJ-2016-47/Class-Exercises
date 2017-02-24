@@ -9,6 +9,12 @@ package multipleinheritance;
  *
  * @author spencerh
  */
-public interface MusicalInstrument {
-	public void play();
+public class Main {
+
+    public static void main(String[] args) {
+       	Guitar lesPaul = new Guitar();
+		lesPaul.burn();
+		lesPaul.play();
+    }
+
 }
