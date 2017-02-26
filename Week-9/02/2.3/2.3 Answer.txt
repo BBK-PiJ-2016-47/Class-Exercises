@@ -1,0 +1,2 @@
+In testPhone, the only method that can be call is call(), 
+as that is the only method in the interface.
