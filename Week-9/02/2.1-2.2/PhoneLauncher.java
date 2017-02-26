@@ -18,12 +18,13 @@ public class PhoneLauncher {
 		nokia3210.printLastNumbers();
 		
 		//Smart phone test
+		//2.2
 		MobilePhone htc = new SmartPhone("htc");
 		htc.call("0047462");
 		htc.call("0164748489");
 		htc.browseWeb("google.com");
 		htc.findPosition();
 		
-	
+
 	}
 }
