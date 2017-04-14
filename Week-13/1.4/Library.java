@@ -1,7 +1,5 @@
 public interface Library {
 
-int 
-
 /**
  * returns library name
  */

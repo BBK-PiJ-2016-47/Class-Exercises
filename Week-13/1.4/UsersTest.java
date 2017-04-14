@@ -6,7 +6,7 @@ public class UsersTest {
 	//@Before
 	//public void buildUp() {
 		Users Bob = new UsersImpl("Bob");
-		Library newLib = new Library();
+		Library newLib = new LibraryImpl("Library Name");
 		int x = Bob.register(newLib);
 		int id = Bob.getLibraryID();
 		String lib = Bob.getLibrary();
