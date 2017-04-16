@@ -11,6 +11,9 @@ public class MemoFib {
     if (precalculated == null) {
       initPrecalculatedArray(n);
     }
+	if (n == 0) {
+	  precalculated = null;
+	}
     if (precalculated[n-1] != -1) {
       return precalculated[n-1];
     } else {
@@ -31,8 +34,8 @@ public class MemoFib {
   	
   public static void main(String[] args) {
 	  MemoFib testing = new MemoFib();
-	  System.out.println(testing.fib(40));
-	  System.out.println(testing.fib(45));
+	  System.out.println(testing.fib(46));
+	  System.out.println(testing.fib(10));
 	  
   }
 
